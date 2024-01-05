@@ -1,0 +1,117 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and Run Server",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\ServerXor.c",
+                "-o",
+                "${workspaceFolder}\\Server_Xor.exe",
+                "-I", "C:\\Program Files\\OpenSSL-Win64\\include",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\bin",
+                "-lws2_32",
+                "-lcrypto-3-x64",  // Corrected library name for OpenSSL 3.0 crypto
+                "-lssl-3-x64"      // Corrected library name for OpenSSL 3.0 SSL
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Compile and Run Client",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\ClientXor.c",
+                "-o",
+                "${workspaceFolder}\\Client_Xor.exe",
+                "-I", "C:\\Program Files\\OpenSSL-Win64\\include",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\bin",
+                "-lws2_32",
+                "-lcrypto-3-x64",  // Corrected library name for OpenSSL 3.0 crypto
+                "-lssl-3-x64"      // Corrected library name for OpenSSL 3.0 SSL
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Compile and Run 3",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\Servercolor.c",
+                "-o",
+                "${workspaceFolder}\\Server_color.exe",
+                "-I", "C:\\Program Files\\OpenSSL-Win64\\include",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\bin",
+                "-lws2_32",
+                "-lcrypto-3-x64",  // Corrected library name for OpenSSL 3.0 crypto
+                "-lssl-3-x64"      // Corrected library name for OpenSSL 3.0 SSL
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Compile and Run 4",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\Clientcolor.c",
+                "-o",
+                "${workspaceFolder}\\Client_color.exe",
+                "-I", "C:\\Program Files\\OpenSSL-Win64\\include",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\bin",
+                "-lws2_32",
+                "-lcrypto-3-x64",  // Corrected library name for OpenSSL 3.0 crypto
+                "-lssl-3-x64"      // Corrected library name for OpenSSL 3.0 SSL
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "ServerClean",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\Server_Final_Clean.c",
+                "-o",
+                "${workspaceFolder}\\Server_Final_DataCom.exe",
+                "-I", "C:\\Program Files\\OpenSSL-Win64\\include",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\bin",
+                "-lws2_32",
+                "-lcrypto-3-x64",  // Corrected library name for OpenSSL 3.0 crypto
+                "-lssl-3-x64"      // Corrected library name for OpenSSL 3.0 SSL
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "ClientClean",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\Client_Final_Clean.c",
+                "-o",
+                "${workspaceFolder}\\Client_Final_DataCom.exe",
+                "-I", "C:\\Program Files\\OpenSSL-Win64\\include",
+                "-L", "C:\\Program Files\\OpenSSL-Win64\\bin",
+                "-lws2_32",
+                "-lcrypto-3-x64",  // Corrected library name for OpenSSL 3.0 crypto
+                "-lssl-3-x64"      // Corrected library name for OpenSSL 3.0 SSL
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        }
+        
+    ]
+}
