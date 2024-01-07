@@ -163,7 +163,7 @@ int main() {
     RegisterClass(&wc);
 
     HWND hWnd = CreateWindow(TEXT("myWindowClass"), TEXT("Server"), WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX, CW_USEDEFAULT, CW_USEDEFAULT, 
-                            400, 300, NULL, NULL, hInstance, NULL);
+                                400, 300, NULL, NULL, hInstance, NULL);
 
     hChatBox = CreateWindowEx(0, TEXT("RichEdit20W"), NULL, WS_CHILD | WS_VISIBLE | WS_VSCROLL | ES_MULTILINE | ES_READONLY, 
                             10, 10, 360, 200, hWnd, (HMENU)ID_CHAT_BOX, hInstance, NULL);
