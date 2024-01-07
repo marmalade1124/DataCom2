@@ -172,8 +172,9 @@ int main() {
     wc.lpfnWndProc = WindowsProcedure;
 
     RegisterClass(&wc);
-    HWND hWnd = CreateWindow(TEXT("ClientWindowClass"), TEXT("Client"), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 
-                                    400, 300, NULL, NULL, hInstance, NULL);
+
+    HWND hWnd = CreateWindow(TEXT("ClientWindowClass"), TEXT("Client"), WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX, CW_USEDEFAULT, CW_USEDEFAULT, 
+                            400, 300, NULL, NULL, hInstance, NULL);
 
     // Create GUI elements
     hChatBox = CreateWindowEx(0, TEXT("RichEdit20W"), NULL, WS_CHILD | WS_VISIBLE | WS_VSCROLL | ES_MULTILINE | ES_READONLY, 
